@@ -1,0 +1,54 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{ "name": "Perl POD",
+  "scopeName": "source.documentation.perl",
+  "fileTypes": ["pod"],
+  "uuid": "68748f9d-6fd9-4ac6-897f-b8879b02b499",
+  "patterns": [
+
+    { "name": "keyword.other.documentation.perl",
+      "match": "^=(pod|cut|over|item|back)\\W*$"
+    },
+
+    { "name": "keyword.valued.other.documentation.perl",
+      "begin": "^=(head[0-3]|item)\\W{1,}(.+)",
+      "beginCaptures": {
+          "2": { "name": "entity.header.other.documentation.perl" }
+      },
+      "patterns": [
+       { "include": "$self" }
+      ],
+      "end":  "$"
+    },
+
+    { "name": "support.function.documentation.perl",
+      "begin": "[IBCLEFX]<([\\w ]*)",
+      "beginCaptures": {
+          "1": { "name": "string.other.documentation.perl" }
+      },
+      "end":  ">"
+    },
+
+    { "name": "keyword.other.documentation.perl",
+      "begin": "^=item\\W*(\\w*)",
+      "beginCaptures": {
+          "1": { "name": "string.other.documentation.perl" }
+      },
+      "end":  "$"
+    },
+
+
+    // illegal entries, fall through from top
+
+    { "name": "invalid.illegal.other.documentation.perl",
+      "match": "^=back.*\\w{1,}"
+    },
+
+    { "name": "invalid.deprecated.other.documentation.perl",
+      "match": "^=over.*\\w{1,}"
+    },
+
+    { "name": "invalid.illegal.documentation.perl",
+      "match": "^=\\W*\\w+"
+    }
+  ]
+}
