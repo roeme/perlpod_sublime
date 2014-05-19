@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[=over
+
+${0}
+
+=back]]></content>
+    <tabTrigger>over</tabTrigger>
+    <scope>source.documentation.perl</scope>
+    <description>Indentation Block</description>
+</snippet>
