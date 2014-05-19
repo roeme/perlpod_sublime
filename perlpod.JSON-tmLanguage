@@ -10,7 +10,7 @@
     },
 
     { "name": "keyword.valued.other.documentation.perl",
-      "begin": "^=(head[0-3]|item)\\W{1,}(.+)",
+      "begin": "^=(head[1-4]|item)\\W{1,}(.+)",
       "beginCaptures": {
           "2": { "name": "entity.header.other.documentation.perl" }
       },

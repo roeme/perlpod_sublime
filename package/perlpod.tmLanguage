@@ -18,7 +18,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^=(head[0-3]|item)\W{1,}(.+)</string>
+			<string>^=(head[1-4]|item)\W{1,}(.+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
